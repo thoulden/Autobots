@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Economics Blog - Mechanical Insights</title>
+    <title>Economics Blog - Subtle Mechanical Elegance</title>
     
-    <!-- Google Font for a mechanical style -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Orbitron for headlines and Open Sans for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 
     <!-- PyScript Assets -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
@@ -18,89 +18,96 @@
     
     <!-- Custom CSS Styling -->
     <style>
-      /* Overall page styling */
+      /* Base Styling */
       body {
         margin: 0;
         padding: 0;
-        background: #1d1f21;
-        color: #c5c8c6;
-        font-family: 'Orbitron', sans-serif;
+        background: #f5f5f5;
+        color: #333;
+        font-family: 'Open Sans', sans-serif;
         line-height: 1.6;
       }
       
-      /* Header with a mechanical accent */
+      /* Header with Subtle Mechanical Accents */
       header {
-        background: #2b2d2f;
-        border-bottom: 3px solid #f0ad4e;
+        background: linear-gradient(135deg, #2e3d49, #3f4f61);
         padding: 20px;
         text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
       header h1 {
         margin: 0;
+        font-family: 'Orbitron', sans-serif;
         font-size: 2.5em;
-        color: #f0ad4e;
+        color: #f8f9fa;
       }
       
-      /* Main content container */
+      /* Main Content Container */
       .container {
-        padding: 20px;
         max-width: 800px;
-        margin: 0 auto;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-radius: 6px;
       }
       
-      /* Section titles with accent lines */
+      /* Section Titles with a Refined Accent */
       h2 {
-        border-bottom: 2px solid #f0ad4e;
-        padding-bottom: 10px;
-        margin-top: 40px;
-        color: #f0ad4e;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #3f4f61;
+        padding-bottom: 5px;
+        color: #2e3d49;
       }
       
-      /* Paragraphs and labels */
+      /* Text Styling for Paragraphs and Labels */
       p, label {
         font-size: 1.1em;
+        margin: 10px 0;
       }
       
-      /* Form elements */
+      /* Input and Button Styling */
       input[type="number"] {
-        padding: 8px;
-        margin: 10px 0;
-        border: 1px solid #444;
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
         border-radius: 4px;
-        background-color: #2b2d2f;
-        color: #c5c8c6;
         font-size: 1em;
       }
       button {
-        background-color: #f0ad4e;
+        background: #3f4f61;
+        color: #fff;
         border: none;
         padding: 10px 20px;
-        border-radius: 4px;
         font-size: 1em;
-        color: #1d1f21;
+        border-radius: 4px;
         cursor: pointer;
+        transition: background 0.3s;
       }
       button:hover {
-        background-color: #ec971f;
+        background: #2e3d49;
       }
       
-      /* Simulation output box styling */
+      /* Simulation Output Styling */
       .simulation-output {
-        background: #2b2d2f;
-        border: 1px solid #444;
-        border-radius: 4px;
+        background: #e9ecef;
+        border: 1px solid #d3d9df;
         padding: 15px;
-        margin-top: 20px;
+        border-radius: 4px;
+        margin-top: 15px;
       }
       
-      /* Footer styling */
-      .footer {
-        margin-top: 50px;
+      /* Footer Styling */
+      footer {
         text-align: center;
-        padding: 20px;
-        border-top: 1px solid #444;
+        margin: 30px 0;
         font-size: 0.9em;
-        color: #888;
+        color: #777;
       }
     </style>
   </head>
@@ -115,14 +122,14 @@
       <section>
         <h2>Welcome</h2>
         <p>
-          Welcome to my economics blog, where I summarize research papers and run interactive simulations. Enjoy exploring complex economic models presented with a modern, mechanical-inspired design.
+          Welcome to my economics blog, where I analyze research papers and present interactive simulations with a refined, subtly mechanical design. Explore economic models and data with a touch of industrial elegance.
         </p>
       </section>
       
       <!-- Mathematical Notation Section -->
       <section>
         <h2>Mathematical Notation</h2>
-        <p>Below is an example of a mathematical equation rendered with LaTeX:</p>
+        <p>Here’s an example of a LaTeX-rendered equation:</p>
         <p>\( E = mc^2 \)</p>
       </section>
       
@@ -134,28 +141,25 @@
         <button onclick="simulate()">Run Simulation</button>
         <div class="simulation-output" id="output"></div>
         
-        <!-- Python simulation code with PyScript -->
+        <!-- Python Simulation Code using PyScript -->
         <py-script>
           from pyscript import Element, display
 
           def simulate():
-              # Retrieve the price from the input element
               price = int(Element('price').element.value)
-              # A simple simulation for supply and demand
               quantity_demanded = max(0, 100 - price)
               quantity_supplied = max(0, price - 50)
-              # Clear any previous output
               Element("output").element.innerHTML = ""
-              # Display simulation results
-              display(f"<p>Price: {price}</p>", target="output")
-              display(f"<p>Quantity Demanded: {quantity_demanded}</p>", target="output")
-              display(f"<p>Quantity Supplied: {quantity_supplied}</p>", target="output")
+              display(f"<p><strong>Price:</strong> {price}</p>", target="output")
+              display(f"<p><strong>Quantity Demanded:</strong> {quantity_demanded}</p>", target="output")
+              display(f"<p><strong>Quantity Supplied:</strong> {quantity_supplied}</p>", target="output")
         </py-script>
       </section>
     </div>
     
-    <footer class="footer">
-      &copy; 2025 Economics Blog | Mechanical Insights
+    <footer>
+      &copy; 2025 Economics Blog. All Rights Reserved.
     </footer>
   </body>
 </html>
+
