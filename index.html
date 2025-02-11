@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Economics Blog - Refined Mechanical Aesthetics</title>
+    <title>Economics Blog - Subtle Modernism</title>
     
-    <!-- Google Fonts: Montserrat for titles and Roboto for body text -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Lora for headings and Source Sans Pro for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
     
     <!-- PyScript Assets -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
@@ -18,103 +18,117 @@
     
     <!-- Custom CSS Styling -->
     <style>
-      /* Base Styling */
+      /* Base styling */
       body {
         margin: 0;
         padding: 0;
-        background: #f8f9fa;
+        background: #fff;
         color: #333;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
         line-height: 1.6;
       }
       
-      /* Header with Subtle Mechanical Accents */
+      /* Header styling with minimalist, modern influence */
       header {
-        background: linear-gradient(135deg, #5a5a5a, #8a8a8a);
-        padding: 20px;
         text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        border-bottom: 1px solid #ddd;
       }
       header h1 {
         margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.8em;
-        color: #ffffff;
+        font-family: 'Lora', serif;
+        font-size: 2.5rem;
+        letter-spacing: 0.05rem;
       }
       
-      /* Main Content Container */
-      .container {
-        max-width: 800px;
-        margin: 40px auto;
-        background: #ffffff;
-        padding: 30px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        border-radius: 6px;
+      /* Navigation menu */
+      nav {
+        text-align: center;
+        padding: 1rem 0;
       }
-      
-      /* Section Titles with a Refined Accent */
-      h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.8em;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #8a8a8a;
-        padding-bottom: 5px;
+      nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #666;
+        font-weight: 600;
+      }
+      nav a:hover {
         color: #333;
       }
       
-      /* Text Styling for Paragraphs and Labels */
-      p, label {
-        font-size: 1.1em;
-        margin: 10px 0;
+      /* Container for main content */
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
       }
       
-      /* Input and Button Styling */
-      input[type="number"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 8px;
-        margin-bottom: 15px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        font-size: 1em;
+      /* Section headings */
+      h2 {
+        font-family: 'Lora', serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
       }
-      button {
-        background: #5a5a5a;
+      
+      /* Paragraphs */
+      p {
+        margin-bottom: 1.5rem;
+      }
+      
+      /* Simulation section styling */
+      .simulation {
+        background: #f9f9f9;
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .simulation input[type="number"] {
+        width: 100%;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .simulation button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: #666;
         color: #fff;
         border: none;
-        padding: 10px 20px;
-        font-size: 1em;
         border-radius: 4px;
         cursor: pointer;
         transition: background 0.3s;
       }
-      button:hover {
-        background: #707070;
+      .simulation button:hover {
+        background: #444;
+      }
+      .output {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #fff;
+        border: 1px solid #eee;
       }
       
-      /* Simulation Output Styling */
-      .simulation-output {
-        background: #e9ecef;
-        border: 1px solid #ced4da;
-        padding: 15px;
-        border-radius: 4px;
-        margin-top: 15px;
-      }
-      
-      /* Footer Styling */
+      /* Footer styling */
       footer {
         text-align: center;
-        margin: 30px 0;
-        font-size: 0.9em;
+        padding: 2rem 0;
+        border-top: 1px solid #ddd;
+        font-size: 0.9rem;
         color: #777;
       }
     </style>
   </head>
-  
   <body>
     <header>
       <h1>Economics Blog</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Archive</a>
+      </nav>
     </header>
     
     <div class="container">
@@ -122,29 +136,28 @@
       <section>
         <h2>Welcome</h2>
         <p>
-          Welcome to my economics blog, where I analyze research papers and present interactive simulations with refined mechanical aesthetics. Explore economic models and data with subtle industrial elegance.
+          Welcome to our Economics Blog, where we break down research papers and explore economic theories with clarity and interactive tools. Enjoy insightful analysis presented in a minimalistic, modern layout.
         </p>
       </section>
       
       <!-- Mathematical Notation Section -->
       <section>
         <h2>Mathematical Notation</h2>
-        <p>Here’s an example of a LaTeX-rendered equation:</p>
+        <p>Here's an example of a LaTeX-rendered equation:</p>
         <p>\( E = mc^2 \)</p>
       </section>
       
-      <!-- Supply and Demand Simulation Section -->
-      <section>
+      <!-- Simulation Section -->
+      <section class="simulation">
         <h2>Supply and Demand Simulation</h2>
         <label for="price">Enter Price:</label>
         <input type="number" id="price" value="50" />
         <button onclick="simulate()">Run Simulation</button>
-        <div class="simulation-output" id="output"></div>
+        <div class="output" id="output"></div>
         
-        <!-- Python Simulation Code using PyScript -->
+        <!-- PyScript code for the simulation -->
         <py-script>
           from pyscript import Element, display
-
           def simulate():
               price = int(Element('price').element.value)
               quantity_demanded = max(0, 100 - price)
@@ -161,7 +174,5 @@
       &copy; 2025 Economics Blog. All Rights Reserved.
     </footer>
   </body>
-</html>
-
 </html>
 
