@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Economics Blog - Subtle Modernism</title>
+    <title>About - Economics Blog</title>
     
     <!-- Google Fonts: Lora for headings and Source Sans Pro for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
@@ -12,13 +12,8 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
     <script defer src="https://pyscript.net/releases/2024.1.1/core.js"></script>
     
-    <!-- MathJax for LaTeX rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Custom CSS Styling -->
+    <!-- Custom CSS Styling (reuse similar styling as index.html) -->
     <style>
-      /* Base styling */
       body {
         margin: 0;
         padding: 0;
@@ -27,24 +22,23 @@
         font-family: 'Source Sans Pro', sans-serif;
         line-height: 1.6;
       }
-      
-      /* Header styling with minimalist, modern influence */
       header {
         text-align: center;
         padding: 2rem 0;
+        background: linear-gradient(135deg, #44BBA4, #5DC9B5);
+        color: #fff;
         border-bottom: 1px solid #ddd;
       }
       header h1 {
         margin: 0;
         font-family: 'Lora', serif;
         font-size: 2.5rem;
-        letter-spacing: 0.05rem;
       }
-      
-      /* Navigation menu */
       nav {
         text-align: center;
         padding: 1rem 0;
+        background: #f8f8f8;
+        border-bottom: 1px solid #eee;
       }
       nav a {
         margin: 0 1rem;
@@ -55,15 +49,11 @@
       nav a:hover {
         color: #333;
       }
-      
-      /* Container for main content */
       .container {
         max-width: 800px;
         margin: 2rem auto;
         padding: 0 1rem;
       }
-      
-      /* Section headings */
       h2 {
         font-family: 'Lora', serif;
         font-size: 2rem;
@@ -71,47 +61,9 @@
         border-bottom: 2px solid #eee;
         padding-bottom: 0.5rem;
       }
-      
-      /* Paragraphs */
       p {
         margin-bottom: 1.5rem;
       }
-      
-      /* Simulation section styling */
-      .simulation {
-        background: #f9f9f9;
-        padding: 1.5rem;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      .simulation input[type="number"] {
-        width: 100%;
-        padding: 0.75rem;
-        margin: 0.5rem 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      .simulation button {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background: #666;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .simulation button:hover {
-        background: #444;
-      }
-      .output {
-        margin-top: 1rem;
-        padding: 1rem;
-        background: #fff;
-        border: 1px solid #eee;
-      }
-      
-      /* Footer styling */
       footer {
         text-align: center;
         padding: 2rem 0;
@@ -123,55 +75,25 @@
   </head>
   <body>
     <header>
-      <h1>Title</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Archive</a>
-      </nav>
+      <h1>About This Blog</h1>
     </header>
-    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="newpage.html">About</a>
+    </nav>
     <div class="container">
-      <!-- Welcome Section -->
       <section>
-        <h2>Welcome</h2>
+        <h2>About</h2>
         <p>
-          Test
+          This Economics Blog was created to summarize and explore economic research and theories with clarity, interactive simulations, and a minimalist design inspired by modern aesthetics.
+        </p>
+        <p>
+          Here you'll find analyses of economic papers, interactive models, and thoughtful commentary—all presented in a clean, understated format.
         </p>
       </section>
-      
-      <!-- Mathematical Notation Section -->
-      <section>
-        <h2>Mathematical Notation</h2>
-        <p>Here's an example of a LaTeX-rendered equation:</p>
-        <p>\( E = mc^2 \)</p>
-      </section>
-      
-      <!-- Simulation Section -->
-      <section class="simulation">
-        <h2>Supply and Demand Simulation</h2>
-        <label for="price">Enter Price:</label>
-        <input type="number" id="price" value="50" />
-        <button onclick="simulate()">Run Simulation</button>
-        <div class="output" id="output"></div>
-        
-        <!-- PyScript code for the simulation -->
-        <py-script>
-          from pyscript import Element, display
-          def simulate():
-              price = int(Element('price').element.value)
-              quantity_demanded = max(0, 100 - price)
-              quantity_supplied = max(0, price - 50)
-              Element("output").element.innerHTML = ""
-              display(f"<p><strong>Price:</strong> {price}</p>", target="output")
-              display(f"<p><strong>Quantity Demanded:</strong> {quantity_demanded}</p>", target="output")
-              display(f"<p><strong>Quantity Supplied:</strong> {quantity_supplied}</p>", target="output")
-        </py-script>
-      </section>
     </div>
-    
     <footer>
-      <!--&copy; 2025 Economics Blog. All Rights Reserved.-->
+      &copy; 2025 Economics Blog. All Rights Reserved.
     </footer>
   </body>
 </html>
